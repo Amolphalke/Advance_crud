@@ -1,0 +1,24 @@
+﻿@model Advance_crud.Models.Country;
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit Country </h2>
+<div class="container">
+    <form method="post">
+        <div class="row">
+            <div class="col-6 form-group">
+                <label asp-for="country_name" class="form-label">Country_Name</label>
+                <input asp-for="country_name" class="form-control" />
+                <span asp-validation-for="country_name" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </div>
+
+    </form>
+
+</div>

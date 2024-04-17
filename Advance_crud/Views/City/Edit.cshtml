@@ -1,0 +1,32 @@
+﻿@model Advance_crud.Models.City;
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Create Country </h2>
+<div class="container">
+    <form method="post">
+        <input type="hidden" asp-for="city_id"/>
+        <div class="row">
+            <div class="col-6 form-group">
+                <label asp-for="city_name" class="form-label">State Name</label>
+                <input asp-for="city_name" class="form-control" />
+                <span asp-validation-for="city_name" class="text-danger"></span>
+            </div>
+            <div class="col-6 form-group">
+                <label asp-for="state_id" class="form-label">Country Name</label>
+                <select asp-for="state_id" asp-items="@(new SelectList(ViewBag.Statelists, "state_id", "state_name"))" class="form-control">
+                    <option value="">Select Country</option>
+                </select>
+                <span asp-validation-for="state_id" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="row mt-2">
+            <div class="col-4">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </div>
+
+    </form>
+
+</div>
